@@ -23,6 +23,7 @@ gem 'webpacker'
 gem 'react-rails'
 gem 'foundation-rails'
 gem 'devise'
+gem 'jquery-rails'
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
