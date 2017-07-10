@@ -7,14 +7,19 @@
     <title><%= content_for?(:title) ? yield(:title) : "Untitled" %></title>
 
     <%= stylesheet_link_tag    "application" %>
-    <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
+
     <%= javascript_pack_tag 'hello_react' %>
+
     <%= csrf_meta_tags %>
   </head>
 
   <body>
+    <%= render 'partials/header' %>
 
     <%= yield %>
 
+    <div class="message">Initial message</div>
+
   </body>
+  <%= javascript_pack_tag 'application' %>
 </html>

@@ -41,10 +41,18 @@ module.exports = {
     new ManifestPlugin({
       publicPath: output.publicPath,
       writeToFileEmit: true
+    }),
+    new webpack.ProvidePlugin({
+      $: 'jquery',
+      jQuery: 'jquery',
+      jquery: 'jquery'
     })
   ],
 
   resolve: {
+    alias: {
+      jquery: "jquery/src/jquery"
+    },
     extensions: settings.extensions,
     modules: [
       resolve(settings.source_path),

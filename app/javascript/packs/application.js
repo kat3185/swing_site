@@ -8,7 +8,26 @@
 // layout file, like app/views/layouts/application.html.erb
 
 console.log('Hello World from Webpacker')
+$('.message').text("zomg it worked");
+
 // Support component names relative to this directory:
+import '../vendor/foundation.min.js'
 var componentRequireContext = require.context("components", true)
 var ReactRailsUJS = require("react_ujs")
 ReactRailsUJS.useContext(componentRequireContext)
+
+$(function(){ $(document).foundation(); });
+
+class Thing {
+  constructor(input) {
+    this.thing = input;
+  }
+
+  printThing() {
+    console.log(this.thing);
+    return "ZOMG";
+  }
+};
+
+let thing = new Thing("bob");
+thing.printThing();
