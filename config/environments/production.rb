@@ -88,4 +88,7 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+
+  # You should probably figure out the url
+  config.action_mailer.default_url_options = { host: 'swing_site.heroku.com', port: 3000 }
 end
